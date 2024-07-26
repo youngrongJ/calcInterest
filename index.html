@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>원리합계 계산기</title>
+  </head>
+  <body>
+    <h1>아빠를 위한 원리합계 계산기</h1>
+    <form id="calcForm">
+      <label for="monthlyPayment">월납입금: </label>
+      <input type="number" id="monthlyPayment" required /><br /><br />
+
+      <label for="interestRate">이자율 (%): </label>
+      <input type="number" id="interestRate" step="0.01" required /><br /><br />
+
+      <label for="numberOfPayments">납입횟수 (개월): </label>
+      <input type="number" id="numberOfPayments" required /><br /><br />
+
+      <button type="button" onclick="calculateTotal()">계산하기</button>
+    </form>
+
+    <h2>결과</h2>
+    <p>원리합계: <span id="totalResult"></span></p>
+    <p>총 납입금: <span id="totalPaymentsResult"></span></p>
+    <p>총 이자: <span id="totalInterestResult"></span></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
